@@ -1,107 +1,107 @@
 # Scripting and Automation for Threat Mitigation
 
-Este proyecto contiene un script en Python para la automatización de tareas relacionadas con la mitigación de amenazas. El script realiza un escaneo de puertos abiertos en una dirección IP, verifica vulnerabilidades comunes en esos puertos y genera un informe con los resultados.
+This project contains a Python script for automating tasks related to threat mitigation. The script scans open ports on an IP address, checks for common vulnerabilities on those ports, and generates a report with the results.
 
-## Requisitos
+## Requirements
 
 - Python 3.x
-- nmap (debe estar instalado y en el PATH)
-- Bibliotecas de Python: `python-nmap` y `requests`
+- nmap (must be installed and in the PATH)
+- Python libraries: `python-nmap` and `requests`
 
-## Instalación
+## Installation
 
-### Paso 1: Instalar `nmap`
+### Step 1: Install `nmap`
 
 #### Windows
 
-1. Descarga el instalador de `nmap` desde [nmap.org](https://nmap.org/download.html).
-2. Ejecuta el instalador y sigue las instrucciones para instalar `nmap`.
-3. Asegúrate de que la ruta de instalación de `nmap` esté en el PATH del sistema. Puedes agregarla manualmente si es necesario.
+1. Download the `nmap` installer from [nmap.org](https://nmap.org/download.html).
+2. Run the installer and follow the instructions to install `nmap`.
+3. Make sure the installation path of `nmap` is in the system PATH. You can add it manually if necessary.
 
 #### macOS
 
-1. Si tienes `Homebrew` instalado, puedes instalar `nmap` con el siguiente comando:
+1. If you have `Homebrew` installed, you can install `nmap` with the following command:
 
     ```sh
     brew install nmap
     ```
 
-2. Si no tienes `Homebrew`, puedes descargar el instalador desde [nmap.org](https://nmap.org/download.html) y seguir las instrucciones.
+2. If you don't have `Homebrew`, you can download the installer from [nmap.org](https://nmap.org/download.html) and follow the instructions.
 
 #### Linux
 
-1. En distribuciones basadas en Debian/Ubuntu, puedes instalar `nmap` con el siguiente comando:
+1. On Debian/Ubuntu-based distributions, you can install `nmap` with the following command:
 
     ```sh
     sudo apt-get install nmap
     ```
 
-2. En distribuciones basadas en Red Hat/Fedora, usa el siguiente comando:
+2. On Red Hat/Fedora-based distributions, use the following command:
 
-    ```
+    ```sh
     sudo yum install nmap
     ```
 
-### Paso 2: Instalar las bibliotecas de Python
+### Step 2: Install Python libraries
 
-Ejecuta el siguiente comando para instalar las bibliotecas requeridas:
+Run the following command to install the required libraries:
 
-```
+```sh
 pip install python-nmap requests
-
 ```
-## Uso
 
-### Paso 1: Clonar el repositorio
+## Usage
 
-Clona este repositorio en tu máquina local:
+### Step 1: Clone the repository
+
+Clone this repository to your local machine:
 
 ```sh
 git clone https://github.com/wh0arew3/-Scripting-and-Automation-for-Threat-Mitigation-
-cd tu_repositorio
+cd your_repository
 ```
 
-### Paso 2: Instalar las bibliotecas de Python
+### Step 2: Install Python libraries
 
-Ejecuta el siguiente comando para instalar las bibliotecas requeridas:
+Run the following command to install the required libraries:
 
 ```sh
 pip install python-nmap requests
 ```
 
-### Paso 3: Ejecutar el script
+### Step 3: Run the script
 
-Ejecuta el script desde la línea de comandos (cmd en Windows o terminal en macOS/Linux):
+Run the script from the command line (cmd on Windows or terminal on macOS/Linux):
 
 ```sh
 python threat_mitigation.py
 ```
 
-### Paso 4: Ingresar la dirección IP
+### Step 4: Enter the IP address
 
-Cuando se te solicite, ingresa la dirección IP que deseas escanear:
-
-```plaintext
-Ingresa la dirección IP a escanear:
-```
-
-### Paso 5: Ver los resultados
-
-El script escaneará los puertos abiertos en la dirección IP especificada, verificará vulnerabilidades comunes y generará un informe en formato JSON llamado `report.json`.
-
-## Ejemplo de salida
+When prompted, enter the IP address you want to scan:
 
 ```plaintext
-Ingresa la dirección IP a escanear: 192.168.1.1
-Escaneando puertos abiertos en 192.168.1.1...
-Puertos abiertos encontrados: [22, 80, 443]
-Escaneo y verificación de vulnerabilidades completado.
-Informe generado: report.json
+Enter the IP address to scan:
 ```
 
-## Informe
+### Step 5: View the results
 
-El informe generado (`report.json`) contendrá información como la siguiente:
+The script will scan the open ports on the specified IP address, check for common vulnerabilities, and generate a JSON report called `report.json`.
+
+## Example output
+
+```plaintext
+Enter the IP address to scan: 192.168.1.1
+Scanning open ports on 192.168.1.1...
+Open ports found: [22, 80, 443]
+Scan and vulnerability check completed.
+Report generated: report.json
+```
+
+## Report
+
+The generated report (`report.json`) will contain information like the following:
 
 ```json
 {
@@ -109,12 +109,11 @@ El informe generado (`report.json`) contendrá información como la siguiente:
     "ip_address": "192.168.1.1",
     "open_ports": [22, 80, 443],
     "vulnerabilities": {
-        "22": "SSH potencialmente vulnerable a ataques de diccionario",
-        "80": "HTTP podría tener vulnerabilidades XSS",
-        "443": "HTTPS podría tener configuraciones débiles de SSL/TLS"
+        "22": "SSH potentially vulnerable to dictionary attacks",
+        "80": "HTTP might have XSS vulnerabilities",
+        "443": "HTTPS might have weak SSL/TLS configurations"
     }
 }
 ```
-
 
 
