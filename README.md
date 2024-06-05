@@ -38,7 +38,7 @@ Este proyecto contiene un script en Python para la automatización de tareas rel
 
 2. En distribuciones basadas en Red Hat/Fedora, usa el siguiente comando:
 
-    ```sh
+    ```
     sudo yum install nmap
     ```
 
@@ -49,18 +49,6 @@ Ejecuta el siguiente comando para instalar las bibliotecas requeridas:
 ```
 pip install python-nmap requests
 
-## Uso
-
-### Paso 1: Clonar el repositorio
-
-Clona este repositorio en tu máquina local:
-
-```sh
-git clone https://github.com/tu_usuario/tu_repositorio.git
-cd tu_repositorio
-
-Aquí tienes el contenido en Markdown para las secciones solicitadas:
-
 ```
 ## Uso
 
@@ -69,7 +57,7 @@ Aquí tienes el contenido en Markdown para las secciones solicitadas:
 Clona este repositorio en tu máquina local:
 
 ```sh
-git clone https://github.com/tu_usuario/tu_repositorio.git
+git clone https://github.com/wh0arew3/-Scripting-and-Automation-for-Threat-Mitigation-
 cd tu_repositorio
 ```
 
